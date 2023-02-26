@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+    <bean name="cus" class="com.spring.ci.constructorinjection_project.Customer">
+          <constructor-arg value="Shiva" type="java.lang.String"/>
+    <constructor-arg value="9010634670" type="java.lang.String"/>
+    
+          <constructor-arg>
+                 <props>
+                      <prop key="Home">Medariwada-Mancherial</prop>
+                      <prop key="Office1">KPHB-Hyderabad</prop>
+                      <prop key="Office2">Banglore</prop>
+                 </props>
+          </constructor-arg>
+    </bean>
+    
+    <bean name="ord" class="com.spring.ci.constructorinjection_project.Order" autowire="constructor">
+         
+          
+          
+    </bean>
+ 
+ 
+</beans>
